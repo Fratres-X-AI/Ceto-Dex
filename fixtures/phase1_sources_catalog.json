@@ -1,0 +1,49 @@
+{
+  "project": "Ceto-Dex",
+  "updated": "2026-08-21",
+  "primary_species": [
+    "sea_turtle",
+    "north_atlantic_right_whale"
+  ],
+  "phase3_optional": [
+    "manatee"
+  ],
+  "sources": {
+    "fathomnet": {
+      "name": "FathomNet Database",
+      "url": "https://database.fathomnet.org/fathomnet/",
+      "license_status": "public_open",
+      "use": "Underwater/nearshore video and image annotations for sea turtle detection and species labels where verified.",
+      "notes": "Extract clips by video_id; split by institution/video, never random frames.",
+      "api": "https://api.fathomnet.org"
+    },
+    "north_atlantic_right_whale": {
+      "name": "NOAA North Atlantic Right Whale materials",
+      "url": "https://www.fisheries.noaa.gov/new-england-mid-atlantic/science-data/artificial-intelligence-right-whale-photo-identification",
+      "license_status": "research_only",
+      "use": "Localization/ID reference from aerial and vessel photos; b-roll video for replay evidence when access permits.",
+      "video_training_ready": false,
+      "notes": "OBIS-SEAMAP NARWSS is occurrence metadata, not visual labels. Kaggle 2015 set is photo-ID, not survey video."
+    },
+    "noaa_broll": {
+      "name": "NOAA Fisheries video gallery",
+      "url": "https://videos.fisheries.noaa.gov/",
+      "license_status": "public_with_attribution",
+      "use": "Small curated clips for replay bundles after license check per asset."
+    },
+    "manatee_phase3": {
+      "name": "Florida manatee public imagery (Phase 3)",
+      "url": "https://myfwc.com/research/manatee/",
+      "license_status": "permission_required",
+      "use": "Deferred until turtle + right whale gates land."
+    }
+  },
+  "hard_negatives": [
+    "fish_school",
+    "ray",
+    "rov_arm",
+    "seabed_clutter",
+    "jellyfish",
+    "marine_debris"
+  ]
+}

@@ -1,0 +1,3 @@
+"""Ceto-Dex — protected marine megafauna video evidence stack."""
+
+__version__ = "0.1.0"
