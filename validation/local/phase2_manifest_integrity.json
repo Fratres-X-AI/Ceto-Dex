@@ -1,0 +1,25 @@
+{
+  "claim": "laptop_scaffold_only",
+  "gate": "phase2_manifest_integrity",
+  "known_limits": [
+    "fixture manifest only",
+    "not production vault layout",
+    "no bulk media on disk"
+  ],
+  "manifest_validation": {
+    "errors": [],
+    "passed": true,
+    "path": "C:\\Users\\elxsh\\Projects\\Ceto-Dex\\fixtures\\sample_manifest.jsonl",
+    "row_count": 3,
+    "splits": {
+      "holdout": 1,
+      "test": 1,
+      "train": 1
+    }
+  },
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "stack": "laptop_scaffold",
+  "timestamp": "2026-08-21T13:17:56.684852+00:00"
+}

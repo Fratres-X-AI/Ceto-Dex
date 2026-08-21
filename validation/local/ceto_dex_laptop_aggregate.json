@@ -1,0 +1,32 @@
+{
+  "audit_path": "artifacts\\laptop_replay_scaffold",
+  "claim": "laptop_scaffold_only",
+  "gate": "ceto_dex_laptop_aggregate",
+  "known_limits": [
+    "laptop scaffold complete",
+    "detector training deferred to runpod",
+    "bulk clip extraction deferred",
+    "not field certified"
+  ],
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "replay": {
+    "bundle_path": "C:\\Users\\elxsh\\Projects\\Ceto-Dex\\artifacts\\laptop_replay_scaffold",
+    "encounter_count": 1,
+    "ledger": {
+      "encounters_sha256": "85d0dd36dff91649d94a2330c70dcb918310eccb05cdc761ea48b41a6339006d",
+      "manifest_excerpt_sha256": "3b4f791371680af5ac12a5b96d762a7ad26ff3b3925109babf2016353ed96b67",
+      "model_card_sha256": "b4b4de52a1e5fc57f798f8b815781b98512882331ddbcb1f2a78d4b371eadcf5"
+    }
+  },
+  "stack": "laptop_scaffold",
+  "subgates": {
+    "phase0": true,
+    "phase1": true,
+    "phase2": true,
+    "phase3": true,
+    "phase7": true
+  },
+  "timestamp": "2026-08-21T13:17:56.691439+00:00"
+}

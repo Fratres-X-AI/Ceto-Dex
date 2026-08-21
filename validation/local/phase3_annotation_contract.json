@@ -1,0 +1,15 @@
+{
+  "claim": "laptop_scaffold_only",
+  "detection_count": 2,
+  "errors": [],
+  "gate": "phase3_annotation_contract",
+  "known_limits": [
+    "fixture annotations only",
+    "no real model inference"
+  ],
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "stack": "laptop_scaffold",
+  "timestamp": "2026-08-21T13:17:56.686428+00:00"
+}

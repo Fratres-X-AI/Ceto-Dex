@@ -1,0 +1,8 @@
+{
+  "known_limits": [
+    "fathomnet_public_data_only",
+    "sea_turtle_whole_image_proxy_labels_from_species_folders",
+    "right_whale_not_in_v1_detector",
+    "not_field_certified"
+  ]
+}

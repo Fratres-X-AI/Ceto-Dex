@@ -1,0 +1,27 @@
+{
+  "artifact_sha256": "463b1653144f08abe2b3490657f01bac36cdc9c15d9a4ecd21bb4253c812a2dd",
+  "audit_path": "artifacts/runpod_v1",
+  "claim": "trained_on_fathomnet_holdout",
+  "gate": "ceto_dex_runpod_one_pass",
+  "known_limits": [
+    "fathomnet_public_data_only",
+    "sea_turtle_whole_image_proxy_labels_from_species_folders",
+    "right_whale_not_in_v1_detector",
+    "not_field_certified"
+  ],
+  "ok": true,
+  "passed": true,
+  "phase4": true,
+  "private": true,
+  "replay": {
+    "bundle_path": "/workspace/ceto-dex/artifacts/runpod_v1",
+    "encounter_count": 0,
+    "ledger": {
+      "encounters_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "manifest_excerpt_sha256": "c32b18fc238eb3d7f51b820a0f1de33e63e2f03304bb1efde5aaf8635ad9d57d",
+      "model_card_sha256": "522d6e2ca9bf0bfd29253f848fd5bf58eb208c56fb731804b3f0d90f034381e1"
+    }
+  },
+  "stack": "runpod_one_pass",
+  "timestamp": "2026-08-21T14:25:20.639139+00:00"
+}

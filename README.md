@@ -18,8 +18,9 @@ This is a **reputation builder**, not a demo product. Public claims require gate
 | Phase 2 manifest integrity | Laptop (fixture) |
 | Phase 3 annotation contract | Laptop (COCO round-trip) |
 | Phase 7 refusal/review | Laptop (synthetic tracks) |
-| Phase 4–6 detector/train/video | **Deferred — RunPod** |
-| Phase 8–11 full validation/release | **Deferred — after RunPod** |
+| Phase 4 detector (RunPod v1) | **RunPod** — turtle, manatee, marine utility early-stop |
+| Phase 5–7 video/refusal on real clips | **Deferred** |
+| Phase 8–11 full validation/release | **Partial** — runpod gates exist; no real-video replay |
 
 ## Quick validation (Nemo)
 
@@ -38,9 +39,9 @@ python -m cetodex.laptop_gate --offline-recon
 
 ## Honest reputation line
 
-> Ceto-Dex laptop scaffold is green: manifest contract, refusal gates, and replay bundle schema exist on fixture/synthetic tracks. No trained detector. Not field certified. RunPod training deferred.
+> Ceto-Dex RunPod v1: sea-turtle specialist (proxy labels), manatee specialist (test mAP50 0.559), early-stop 7-class marine utility (val mAP50 0.597 @ epoch 1). No right whale. Not field certified. Weights local under `artifacts/runpod_*/`.
 
-Do not upgrade this sentence until detector holdout gates and replay bundles exist on real clips.
+Do not upgrade this sentence until holdout gates and replay bundles exist on **real video clips**.
 
 ## Docs
 
@@ -48,7 +49,8 @@ Do not upgrade this sentence until detector holdout gates and replay bundles exi
 - [CLAIMS.md](docs/CLAIMS.md)
 - [VALIDATION.md](docs/VALIDATION.md)
 - [KNOWN_LIMITS.md](docs/KNOWN_LIMITS.md)
-- [RUNPOD.md](docs/RUNPOD.md) — separate run; not started on laptop
+- [RUNPOD.md](docs/RUNPOD.md) — runbook (v1 session complete)
+- [RUNPOD_V1_MANIFEST.md](docs/RUNPOD_V1_MANIFEST.md) — local weight hashes
 - [BUILDER_HANDOFF.md](docs/BUILDER_HANDOFF.md)
 
 ## Fratres stack

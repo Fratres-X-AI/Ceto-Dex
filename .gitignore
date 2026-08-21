@@ -9,6 +9,11 @@ build/
 .venv/
 venv/
 artifacts/
+!artifacts/**/
+!artifacts/**/*.json
+!artifacts/**/*.csv
+!artifacts/**/*.jsonl
+artifacts/**/*.log
 /data/
 *.pt
 *.pth
@@ -16,5 +21,3 @@ artifacts/
 *.mp4
 *.avi
 *.mov
-validation/local/*.json
-!validation/local/.gitkeep

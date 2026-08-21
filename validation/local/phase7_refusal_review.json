@@ -1,0 +1,49 @@
+{
+  "claim": "laptop_scaffold_only",
+  "gate": "phase7_refusal_review",
+  "known_limits": [
+    "synthetic tracks only",
+    "not trained detector output",
+    "no human review UI yet"
+  ],
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "refusal": {
+    "checks": {
+      "good_encounter_allowed": true,
+      "refuse_reason_present": true,
+      "short_track_refused": true
+    },
+    "good": {
+      "asset_id": "asset_turtle_001",
+      "class_name": "sea_turtle",
+      "confidence": 0.8,
+      "decision": "auto_label",
+      "encounter_id": "enc_trk_0001",
+      "frame_count": 5,
+      "refuse_reason": null,
+      "species_label": "loggerhead",
+      "track_id": "trk_0001"
+    },
+    "passed": true,
+    "refused": {
+      "asset_id": "asset_turtle_001",
+      "class_name": "sea_turtle",
+      "confidence": 0.7,
+      "decision": "refused",
+      "encounter_id": "enc_trk_0001",
+      "frame_count": 1,
+      "refuse_reason": "too_few_frames",
+      "species_label": null,
+      "track_id": "trk_0001"
+    }
+  },
+  "stack": "laptop_scaffold",
+  "timestamp": "2026-08-21T13:17:56.686428+00:00",
+  "video_encounter": {
+    "long_track_count": 1,
+    "passed": true,
+    "track_count": 1
+  }
+}

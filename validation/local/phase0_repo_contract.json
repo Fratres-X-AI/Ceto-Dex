@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "doc:README.md": true,
+    "doc:docs/CLAIMS.md": true,
+    "doc:docs/DATA_SOURCES.md": true,
+    "doc:docs/KNOWN_LIMITS.md": true,
+    "doc:docs/RUNPOD.md": true,
+    "doc:docs/VALIDATION.md": true,
+    "fixtures_manifest": true,
+    "module:src/cetodex/encounter.py": true,
+    "module:src/cetodex/evidence_contract.py": true,
+    "module:src/cetodex/manifest.py": true,
+    "module:src/cetodex/phase1_recon.py": true,
+    "module:src/cetodex/refusal.py": true,
+    "module:src/cetodex/replay.py": true,
+    "module:src/cetodex/tracker.py": true,
+    "version": true
+  },
+  "claim": "laptop_scaffold_only",
+  "gate": "phase0_repo_contract",
+  "known_limits": [
+    "repo scaffold only",
+    "no trained detector",
+    "no field certification",
+    "runpod training deferred"
+  ],
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "stack": "laptop_scaffold",
+  "timestamp": "2026-08-21T13:17:56.684852+00:00",
+  "version": "0.1.0"
+}

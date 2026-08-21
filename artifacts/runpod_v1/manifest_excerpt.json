@@ -1,0 +1,64 @@
+[
+  {
+    "label_mode": "whole_image_proxy",
+    "species": {
+      "0. Caretta caretta": {
+        "count": 113,
+        "counts": {
+          "test": 16,
+          "train": 80,
+          "val": 17
+        }
+      },
+      "1. Lepidochelys kempii": {
+        "count": 42,
+        "counts": {
+          "test": 8,
+          "train": 22,
+          "val": 12
+        }
+      },
+      "2. Lepidochelys olivacea": {
+        "count": 70,
+        "counts": {
+          "test": 8,
+          "train": 50,
+          "val": 12
+        }
+      },
+      "3. Chelonia mydas": {
+        "count": 704,
+        "counts": {
+          "test": 60,
+          "train": 560,
+          "val": 84
+        }
+      },
+      "4. Eretmochelys imbricata": {
+        "count": 189,
+        "counts": {
+          "test": 16,
+          "train": 149,
+          "val": 24
+        }
+      },
+      "5. Natator depressus": {
+        "count": 13,
+        "counts": {
+          "test": 8,
+          "train": 0,
+          "val": 5
+        }
+      },
+      "6. Dermochelys coriacea": {
+        "count": 137,
+        "counts": {
+          "test": 16,
+          "train": 97,
+          "val": 24
+        }
+      }
+    },
+    "total": 1268
+  }
+]

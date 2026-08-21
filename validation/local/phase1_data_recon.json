@@ -1,0 +1,92 @@
+{
+  "checks": {
+    "catalog_has_required_sources": true,
+    "catalog_present": true,
+    "license_fields_documented": true,
+    "training_readiness_documented": true
+  },
+  "claim": "laptop_scaffold_only",
+  "gate": "phase1_data_recon",
+  "known_limits": [
+    "recon and catalog only",
+    "no bulk video download",
+    "no detector weights",
+    "live API counts best-effort"
+  ],
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "recon": {
+    "catalog": {
+      "hard_negatives": [
+        "fish_school",
+        "ray",
+        "rov_arm",
+        "seabed_clutter",
+        "jellyfish",
+        "marine_debris"
+      ],
+      "phase3_optional": [
+        "manatee"
+      ],
+      "primary_species": [
+        "sea_turtle",
+        "north_atlantic_right_whale"
+      ],
+      "project": "Ceto-Dex",
+      "sources": {
+        "fathomnet": {
+          "api": "https://api.fathomnet.org",
+          "license_status": "public_open",
+          "name": "FathomNet Database",
+          "notes": "Extract clips by video_id; split by institution/video, never random frames.",
+          "url": "https://database.fathomnet.org/fathomnet/",
+          "use": "Underwater/nearshore video and image annotations for sea turtle detection and species labels where verified."
+        },
+        "manatee_phase3": {
+          "license_status": "permission_required",
+          "name": "Florida manatee public imagery (Phase 3)",
+          "url": "https://myfwc.com/research/manatee/",
+          "use": "Deferred until turtle + right whale gates land."
+        },
+        "noaa_broll": {
+          "license_status": "public_with_attribution",
+          "name": "NOAA Fisheries video gallery",
+          "url": "https://videos.fisheries.noaa.gov/",
+          "use": "Small curated clips for replay bundles after license check per asset."
+        },
+        "north_atlantic_right_whale": {
+          "license_status": "research_only",
+          "name": "NOAA North Atlantic Right Whale materials",
+          "notes": "OBIS-SEAMAP NARWSS is occurrence metadata, not visual labels. Kaggle 2015 set is photo-ID, not survey video.",
+          "url": "https://www.fisheries.noaa.gov/new-england-mid-atlantic/science-data/artificial-intelligence-right-whale-photo-identification",
+          "use": "Localization/ID reference from aerial and vessel photos; b-roll video for replay evidence when access permits.",
+          "video_training_ready": false
+        }
+      },
+      "updated": "2026-08-21"
+    },
+    "fathomnet": {
+      "concepts": [],
+      "live_query_attempted": false
+    },
+    "gaps": [
+      "right_whale_requires_curated_video_or_photo_pipeline_not_bulk_survey_csv"
+    ],
+    "live_errors": [],
+    "recommend_runpod_after": [
+      "manifest_integrity_gate_green",
+      "clip_extraction_complete",
+      "train_val_test_splits_by_video_id"
+    ],
+    "training_readiness": {
+      "manatee": "phase3_optional",
+      "right_whale_detection": "conditional_on_aerial_surface_video_curation",
+      "right_whale_individual_id": "advanced_gate_public_photo_id_exists_not_video_native_yet",
+      "sea_turtle_detection": "conditional_on_fathomnet_clip_extraction",
+      "sea_turtle_species": "conditional_on_per_species_label_counts"
+    }
+  },
+  "stack": "laptop_scaffold",
+  "timestamp": "2026-08-21T13:17:56.684852+00:00"
+}

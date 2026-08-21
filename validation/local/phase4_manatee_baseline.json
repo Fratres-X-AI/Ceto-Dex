@@ -1,0 +1,46 @@
+{
+  "artifact_sha256": "463b1653144f08abe2b3490657f01bac36cdc9c15d9a4ecd21bb4253c812a2dd",
+  "audit_path": "artifacts/runpod_manatee_v1",
+  "claim": "manatee_detector_blue_spring_line_labels",
+  "confidence": 0.6032,
+  "dataset": {
+    "images": 783,
+    "boxes": 11741,
+    "source": "yeyimilk/deep-learning-for-manatee-counting (Blue Spring webcam, Google Drive)"
+  },
+  "eval_dir": "/workspace/ceto-dex/data/eval/manatee_holdout_val",
+  "gate": "phase4_manatee_baseline",
+  "known_limits": [
+    "line_label_to_axis_bbox_proxy_not_true_boxes",
+    "blue_spring_webcam_single_site_only",
+    "dense_multi_instance_aggregation_scenes",
+    "test_holdout_map50_0_559_not_field_certified",
+    "right_whale_not_in_detector",
+    "no_video_tracking_or_refusal_replay_yet"
+  ],
+  "metrics": {
+    "_source_csv": "/workspace/ceto-dex/data/checkpoints/manatee_v1/results.csv",
+    "epoch": 38.0,
+    "lr/pg0": 0.0001685,
+    "lr/pg1": 0.0001685,
+    "lr/pg2": 0.0001685,
+    "metrics/mAP50(B)": 0.6032,
+    "metrics/mAP50-95(B)": 0.2912,
+    "metrics/precision(B)": 0.77182,
+    "metrics/recall(B)": 0.54428,
+    "time": 199.354,
+    "train/box_loss": 1.59549,
+    "train/cls_loss": 0.89622,
+    "train/dfl_loss": 1.11283,
+    "val/box_loss": 1.98519,
+    "val/cls_loss": 1.10912,
+    "val/dfl_loss": 1.33546
+  },
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "stack": "runpod_one_pass",
+  "timestamp": "2026-08-21T14:25:20.510096+00:00",
+  "weights": "/workspace/ceto-dex/data/checkpoints/manatee_v1/weights/best.pt",
+  "yolo_data": "/workspace/ceto-dex/data/yolo_manatee/dataset.yaml"
+}

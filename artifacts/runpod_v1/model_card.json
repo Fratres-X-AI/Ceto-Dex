@@ -1,0 +1,27 @@
+{
+  "classes": [
+    "sea_turtle",
+    "hard_negative"
+  ],
+  "metrics": {
+    "_source_csv": "/workspace/ceto-dex/data/checkpoints/sea_turtle_v1/results.csv",
+    "epoch": 50.0,
+    "lr/pg0": 5.96e-05,
+    "lr/pg1": 5.96e-05,
+    "lr/pg2": 5.96e-05,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.995,
+    "metrics/precision(B)": 0.9997,
+    "metrics/recall(B)": 1.0,
+    "time": 812.608,
+    "train/box_loss": 0.13289,
+    "train/cls_loss": 0.08881,
+    "train/dfl_loss": 0.92599,
+    "val/box_loss": 0.07619,
+    "val/cls_loss": 0.08125,
+    "val/dfl_loss": 0.54156
+  },
+  "name": "ceto-dex-yolo11s-sea-turtle-v1",
+  "weights": "/workspace/ceto-dex/data/checkpoints/sea_turtle_v1/weights/best.pt",
+  "weights_sha256": "bb80238e9724bb2ce2957d76203ce772c195822c451530b84a12da3411dafeb5"
+}

@@ -1,0 +1,30 @@
+{
+  "sources": {
+    "inat": {
+      "images": 1320,
+      "boxes": 1320
+    },
+    "deepfish": {
+      "images": 4505,
+      "boxes": 15463
+    },
+    "fshark": {
+      "images": 0,
+      "boxes": 0
+    },
+    "fray": {
+      "images": 0,
+      "boxes": 0
+    },
+    "turtle": {
+      "images": 1268,
+      "boxes": 1268
+    },
+    "manatee": {
+      "images": 783,
+      "boxes": 11741
+    }
+  },
+  "images": 7876,
+  "boxes": 29792
+}

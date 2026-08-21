@@ -1,0 +1,39 @@
+{
+  "artifact_sha256": "bb80238e9724bb2ce2957d76203ce772c195822c451530b84a12da3411dafeb5",
+  "audit_path": "artifacts/runpod_v1",
+  "claim": "trained_on_fathomnet_holdout",
+  "confidence": 0.995,
+  "eval_dir": "/workspace/ceto-dex/data/eval/holdout_val",
+  "gate": "phase4_detector_baseline",
+  "known_limits": [
+    "fathomnet_public_data_only",
+    "sea_turtle_whole_image_proxy_labels_from_species_folders",
+    "right_whale_not_in_v1_detector",
+    "not_field_certified"
+  ],
+  "metrics": {
+    "_source_csv": "/workspace/ceto-dex/data/checkpoints/sea_turtle_v1/results.csv",
+    "epoch": 50.0,
+    "lr/pg0": 5.96e-05,
+    "lr/pg1": 5.96e-05,
+    "lr/pg2": 5.96e-05,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.995,
+    "metrics/precision(B)": 0.9997,
+    "metrics/recall(B)": 1.0,
+    "time": 812.608,
+    "train/box_loss": 0.13289,
+    "train/cls_loss": 0.08881,
+    "train/dfl_loss": 0.92599,
+    "val/box_loss": 0.07619,
+    "val/cls_loss": 0.08125,
+    "val/dfl_loss": 0.54156
+  },
+  "ok": true,
+  "passed": true,
+  "private": true,
+  "stack": "runpod_one_pass",
+  "timestamp": "2026-08-21T14:15:01.739223+00:00",
+  "weights": "/workspace/ceto-dex/data/checkpoints/sea_turtle_v1/weights/best.pt",
+  "yolo_data": "/workspace/ceto-dex/data/yolo/dataset.yaml"
+}

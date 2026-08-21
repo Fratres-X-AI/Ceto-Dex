@@ -1,45 +1,43 @@
-# Ceto-Dex RunPod runbook (deferred)
+# Ceto-Dex RunPod runbook
 
-**Do not start this on Nemo.** This document exists so the separate RunPod run has a clear entry point.
+**Do not train on Nemo.** Use a GPU pod + data vault; pull weights and gate JSON back; terminate.
 
-## Prerequisites (laptop must be green first)
+## Prerequisites (laptop)
 
 ```powershell
 python -m cetodex.laptop_gate
 pytest -q
 ```
 
-All subgates in `validation/local/ceto_dex_laptop_aggregate.json` must pass.
-
 ## Vault layout (RunPod volume)
 
 ```
-/data/ceto-dex/
-  raw/fathomnet/
-  raw/noaa-right-whale/
-  manifests/
-  clips/
-  frames/
-  annotations/
-  splits/
+/workspace/ceto-dex/data/
+  raw/                    # SeaTurtles_Images, manatee gdrive, deepfish.zip, etc.
+  yolo/                   # turtle YOLO layout
+  yolo_manatee/
+  yolo_marine_utility/    # merged 7-class
   checkpoints/
   eval/
 ```
 
-## Separate-run stages
+## v1 session completed (2026-08-21)
 
-1. **Clip extract** — FathomNet video-linked annotations → MP4 snippets + manifest rows.
-2. **Split builder** — train/val/test/holdout by `video_id` + institution.
-3. **Detector train** — YOLO11 or RT-DETR; hard negatives included.
-4. **Tracker calibrate** — ByteTrack/BoT-SORT on detector outputs.
-5. **Species head** — only classes with sufficient verified labels.
-6. **Eval + replay** — pull metrics JSON and replay bundle to laptop; terminate pod.
+| Script | Output |
+|--------|--------|
+| `runpod_resume_train.sh` | `sea_turtle_v1` — YOLO11s, proxy labels |
+| `runpod_manatee_train.sh` | `manatee_v1` — Blue Spring counting set |
+| `runpod_marine_utility_push.sh` | merged dataset + YOLO11m/l |
+| `runpod_oom_saturate.sh` | YOLO11x batch ramp (optional) |
+
+Artifact manifest: [`RUNPOD_V1_MANIFEST.md`](RUNPOD_V1_MANIFEST.md).
 
 ## Babysit rule
 
 Money on the meter = pulse util, log tail, pull artifacts, say terminate.
 
-## Nemo after RunPod
+## After RunPod (Nemo)
 
-- Light inference smoke on pulled weights (cap batch size).
-- Update `docs/KNOWN_LIMITS.md` and gate JSON only with honest metrics.
+- Weights under `artifacts/runpod_*/best.pt` (gitignored).
+- Update `docs/KNOWN_LIMITS.md` only with honest gate metrics.
+- Light inference smoke only — cap batch size.

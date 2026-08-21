@@ -1,0 +1,29 @@
+{
+  "gate": "phase4_marine_utility",
+  "passed": true,
+  "confidence": 0.59691,
+  "claim": "multi_class_marine_utility_whale_shark_stingray_reef_coral_turtle_manatee",
+  "dataset": {
+    "images": 7876,
+    "boxes": 29792,
+    "classes": ["whale", "shark", "stingray", "reef_fish", "coral_structure", "sea_turtle", "manatee"]
+  },
+  "known_limits": [
+    "marine_utility_m_v1-2_stopped_early_user_done",
+    "fathomnet_shark_ray_not_merged_folder_layout",
+    "inat_whales_stingrays_coral_presence_proxy_boxes",
+    "deepfish_real_reef_fish_bboxes",
+    "oom_probe_b96_b88_failed_b80_in_progress_when_stopped",
+    "not_field_certified"
+  ],
+  "metrics": {
+    "epoch": 1,
+    "metrics/mAP50(B)": 0.59691,
+    "metrics/mAP50-95(B)": 0.22996,
+    "metrics/precision(B)": 0.67399,
+    "metrics/recall(B)": 0.49367
+  },
+  "weights": "artifacts/runpod_marine_v1/best.pt",
+  "stack": "runpod_marine_utility_yolo11m_1280",
+  "timestamp": "2026-08-21T15:25:00+00:00"
+}
