@@ -52,5 +52,3 @@ honest RunPod v1 detector documentation.
 - [ ] Flip repo visibility to public
 - [ ] Create GitHub release from tag `v0.1.0-public-bench`
 - [ ] LinkedIn / community post with honest maturity line
-
-See [PUBLIC_POST_DRAFT.md](PUBLIC_POST_DRAFT.md) for announcement copy.
