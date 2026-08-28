@@ -1,8 +1,13 @@
 {
   "checks": {
+    "doc:CITATION.cff": true,
+    "doc:DATA_CARD.md": true,
+    "doc:MODEL_CARD.md": true,
     "doc:README.md": true,
+    "doc:SECURITY.md": true,
     "doc:docs/CLAIMS.md": true,
     "doc:docs/DATA_SOURCES.md": true,
+    "doc:docs/HUMAN_REVIEW_PROTOCOL.md": true,
     "doc:docs/KNOWN_LIMITS.md": true,
     "doc:docs/RUNPOD.md": true,
     "doc:docs/VALIDATION.md": true,
@@ -19,15 +24,15 @@
   "claim": "laptop_scaffold_only",
   "gate": "phase0_repo_contract",
   "known_limits": [
-    "repo scaffold only",
-    "no trained detector",
+    "public bench release",
+    "runpod v1 weights local only",
     "no field certification",
-    "runpod training deferred"
+    "proxy-label metrics require honest limits"
   ],
   "ok": true,
   "passed": true,
   "private": true,
   "stack": "laptop_scaffold",
-  "timestamp": "2026-08-21T13:17:56.684852+00:00",
+  "timestamp": "2026-08-28T15:21:41.308275+00:00",
   "version": "0.1.0"
 }

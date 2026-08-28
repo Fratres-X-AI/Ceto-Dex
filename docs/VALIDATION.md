@@ -19,7 +19,7 @@ python -m cetodex.laptop_gate
 
 Outputs land in `validation/local/`.
 
-## RunPod gates (deferred)
+## RunPod gates (v1 complete — weights local)
 
 | Gate | Requires |
 |------|----------|

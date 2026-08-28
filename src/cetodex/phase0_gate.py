@@ -16,9 +16,14 @@ LOCAL = ROOT / "validation" / "local"
 
 REQUIRED_DOCS = (
     "README.md",
+    "MODEL_CARD.md",
+    "DATA_CARD.md",
+    "SECURITY.md",
+    "CITATION.cff",
     "docs/DATA_SOURCES.md",
     "docs/CLAIMS.md",
     "docs/VALIDATION.md",
+    "docs/HUMAN_REVIEW_PROTOCOL.md",
     "docs/RUNPOD.md",
     "docs/KNOWN_LIMITS.md",
 )
@@ -50,10 +55,10 @@ def run_gate(root: Path | None = None) -> dict[str, Any]:
         passed=passed,
         stack="laptop_scaffold",
         known_limits=[
-            "repo scaffold only",
-            "no trained detector",
+            "public bench release",
+            "runpod v1 weights local only",
             "no field certification",
-            "runpod training deferred",
+            "proxy-label metrics require honest limits",
         ],
         extra={"checks": checks, "version": __version__},
     )

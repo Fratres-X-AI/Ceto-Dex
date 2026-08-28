@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Ceto-Dex: Marine video detection with refusal-first review"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Bean
+    given-names: Kyle
+  - name: Fratres X AI
+repository-code: "https://github.com/Fratres-X-AI/Ceto-Dex"
+url: "https://github.com/Fratres-X-AI/Ceto-Dex"
+license: Apache-2.0
+version: 0.1.0-public-bench
+date-released: 2026-08-28
+keywords:
+  - marine conservation
+  - computer vision
+  - object detection
+  - refusal gates
+  - protected species
+  - underwater video
+abstract: >-
+  Video-native protected marine megafauna detection with confidence-gated
+  refusal and replay evidence. Detect, track, and refuse low-confidence runs
+  for human review. Not field-certified. Not a conservation authority.
