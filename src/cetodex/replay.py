@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from cetodex.evidence_contract import sha256_file, wrap_gate_report, write_gate_report
+from cetodex.evidence_contract import repo_relative, sha256_file, wrap_gate_report, write_gate_report
 from cetodex.models import Encounter
 
 
@@ -48,7 +48,7 @@ def write_replay_bundle(
     ledger_path.write_text(json.dumps(ledger, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     return {
-        "bundle_path": str(path),
+        "bundle_path": repo_relative(path),
         "encounter_count": len(encounters),
         "ledger": ledger,
     }

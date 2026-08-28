@@ -9,7 +9,7 @@
   "manifest_validation": {
     "errors": [],
     "passed": true,
-    "path": "C:\\Users\\elxsh\\Projects\\Ceto-Dex\\fixtures\\sample_manifest.jsonl",
+    "path": "fixtures/sample_manifest.jsonl",
     "row_count": 3,
     "splits": {
       "holdout": 1,
@@ -21,5 +21,5 @@
   "passed": true,
   "private": true,
   "stack": "laptop_scaffold",
-  "timestamp": "2026-08-28T15:21:41.309274+00:00"
+  "timestamp": "2026-08-28T15:29:01.167476+00:00"
 }

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from cetodex.evidence_contract import repo_relative
 from cetodex.models import BBox, DetectionAnnotation, SourceAsset
 
 REQUIRED_MANIFEST_FIELDS = (
@@ -85,7 +86,7 @@ def validate_manifest(path: Path) -> dict[str, Any]:
         split = str(row.get("split", "unassigned"))
         splits[split] = splits.get(split, 0) + 1
     return {
-        "path": str(path),
+        "path": repo_relative(path),
         "row_count": len(rows),
         "splits": splits,
         "errors": errors,

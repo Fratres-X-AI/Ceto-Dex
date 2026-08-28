@@ -87,7 +87,7 @@ def run_all(*, offline_recon: bool = False) -> dict[str, Any]:
             "bulk clip extraction deferred",
             "not field certified",
         ],
-        audit_path=str(ARTIFACTS.relative_to(ROOT)),
+        audit_path=ARTIFACTS.relative_to(ROOT).as_posix(),
         extra={"subgates": {k: v["passed"] for k, v in reports.items()}, "replay": replay},
     )
     return aggregate

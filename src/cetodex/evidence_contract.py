@@ -23,6 +23,18 @@ OPTIONAL_KEYS = (
 )
 
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def repo_relative(path: Path) -> str:
+    """Render a path relative to the repo root as posix, never leaking a local
+    absolute path (e.g. a username) into public evidence JSON."""
+    try:
+        return path.resolve().relative_to(REPO_ROOT).as_posix()
+    except ValueError:
+        return Path(path).name
+
+
 def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
 

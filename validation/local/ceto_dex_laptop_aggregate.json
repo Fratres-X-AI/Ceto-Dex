@@ -1,5 +1,5 @@
 {
-  "audit_path": "artifacts\\laptop_replay_scaffold",
+  "audit_path": "artifacts/laptop_replay_scaffold",
   "claim": "laptop_scaffold_only",
   "gate": "ceto_dex_laptop_aggregate",
   "known_limits": [
@@ -12,7 +12,7 @@
   "passed": true,
   "private": true,
   "replay": {
-    "bundle_path": "C:\\Users\\elxsh\\Projects\\Ceto-Dex\\artifacts\\laptop_replay_scaffold",
+    "bundle_path": "artifacts/laptop_replay_scaffold",
     "encounter_count": 1,
     "ledger": {
       "encounters_sha256": "85d0dd36dff91649d94a2330c70dcb918310eccb05cdc761ea48b41a6339006d",
@@ -28,5 +28,5 @@
     "phase3": true,
     "phase7": true
   },
-  "timestamp": "2026-08-28T15:21:41.317276+00:00"
+  "timestamp": "2026-08-28T15:29:01.176419+00:00"
 }
